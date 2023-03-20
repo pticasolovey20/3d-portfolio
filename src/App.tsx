@@ -1,7 +1,9 @@
 import { FC } from "react";
 
 import { NavigationComponent } from "./components/navigation";
+
 import { HomePage } from "./pages/HomePage";
+import { AboutPage } from "./pages/AboutPage";
 
 export const App: FC = (): JSX.Element => {
 	return (
@@ -10,6 +12,7 @@ export const App: FC = (): JSX.Element => {
 				<HomePage />
 				<NavigationComponent />
 			</div>
+			<AboutPage />
 		</div>
 	);
 };
