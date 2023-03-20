@@ -3,10 +3,21 @@ import secondExample from "../assets/secondExample.png";
 import thirdExample from "../assets/thirdExample.png";
 import fourthExample from "../assets/fourthExample.png";
 
-import wayup from "../assets/wayup.png";
-import upwork from "../assets/upwork.png";
+import wayup from "../assets/company/wayup.png";
+import upwork from "../assets/company/upwork.png";
 
-import { IExperiences, IServises } from "../types/constants";
+import html from "../assets/tech/html.png";
+import css from "../assets/tech/css.png";
+import javascript from "../assets/tech/javascript.png";
+import typescript from "../assets/tech/typescript.png";
+import reactjs from "../assets/tech/reactjs.png";
+import redux from "../assets/tech/redux.png";
+import tailwind from "../assets/tech/tailwind.png";
+import nodejs from "../assets/tech/nodejs.png";
+import git from "../assets/tech/git.png";
+import figma from "../assets/tech/figma.png";
+
+import { IExperiences, IServises, ITechnologies } from "../types/constants";
 
 export const navigations: string[] = ["home", "about", "education", "stack", "contact"];
 
@@ -58,5 +69,48 @@ export const experiences: IExperiences[] = [
 			"Investigated and fixed bugs reported by users",
 			"Optimized applications for maximum speed and scalability",
 		],
+	},
+];
+
+export const technologies: ITechnologies[] = [
+	{
+		name: "HTML 5",
+		icon: html,
+	},
+	{
+		name: "CSS 3",
+		icon: css,
+	},
+	{
+		name: "JavaScript",
+		icon: javascript,
+	},
+	{
+		name: "TypeScript",
+		icon: typescript,
+	},
+	{
+		name: "React JS",
+		icon: reactjs,
+	},
+	{
+		name: "Redux Toolkit",
+		icon: redux,
+	},
+	{
+		name: "Tailwind CSS",
+		icon: tailwind,
+	},
+	{
+		name: "Node JS",
+		icon: nodejs,
+	},
+	{
+		name: "git",
+		icon: git,
+	},
+	{
+		name: "figma",
+		icon: figma,
 	},
 ];
