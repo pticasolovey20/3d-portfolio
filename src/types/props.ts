@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { IServises } from "./constants";
+import { IExperiences, IServises } from "./constants";
 
 export interface IIconSelector {
 	icon: string;
@@ -18,4 +18,8 @@ export interface IService {
 export interface IWrapper {
 	children: ReactNode;
 	id: string;
+}
+
+export interface IEducation {
+	experience: IExperiences;
 }

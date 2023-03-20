@@ -24,7 +24,7 @@ export const AboutPage: FC = (): JSX.Element => {
 				closely with clients to create efficient, scalable, and user-friendly solutions that
 				solve real-world problems. Let's work together to bring your ideas to life!
 			</motion.p>
-			<div className="mt-20 flex flex-wrap justify-between gap-10">
+			<div className="mt-20 flex flex-wrap gap-[50px]">
 				{services.map((service, index) => (
 					<ServiceCard key={service.title} index={index} service={service} />
 				))}

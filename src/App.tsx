@@ -4,6 +4,7 @@ import { NavigationComponent } from "./components/navigation";
 
 import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
+import { EducationPage } from "./pages/EducationPage";
 
 export const App: FC = (): JSX.Element => {
 	return (
@@ -13,6 +14,7 @@ export const App: FC = (): JSX.Element => {
 				<NavigationComponent />
 			</div>
 			<AboutPage />
+			<EducationPage />
 		</div>
 	);
 };

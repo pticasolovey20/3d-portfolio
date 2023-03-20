@@ -6,7 +6,7 @@ import { ComputerCanvas } from "../components/canvas/cumputer";
 
 export const HomePage: FC = (): JSX.Element => {
 	return (
-		<section className={`relative w-full h-screen mx-auto`}>
+		<section className={`relative w-full h-screen mx-auto`} id="home">
 			<div
 				className={`absolute inset-0 top-[120px] max-w-screen-2xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
 			>
