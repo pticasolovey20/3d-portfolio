@@ -11,3 +11,8 @@ export interface IExperiences {
 	date: string;
 	points: string[];
 }
+
+export interface ITechnologies {
+	name: string;
+	icon: any;
+}
