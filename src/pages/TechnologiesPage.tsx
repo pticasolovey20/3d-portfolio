@@ -2,12 +2,10 @@ import { FC } from "react";
 import $ from "jquery";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import { motion } from "framer-motion";
 
-import { textVariant } from "../utils/motion";
-import { styles } from "../styles/styles";
 import { technologies } from "../constants";
 import { WrapperComponent } from "../components/wrapper";
+import { HeadLineComponent } from "../components/headline";
 
 const body = $("body");
 
@@ -64,10 +62,7 @@ export const TechnologiesPage: FC = (): JSX.Element => {
 
 	return (
 		<WrapperComponent id="stack">
-			<motion.div variants={textVariant()}>
-				<p className={styles.sectionSubText}>Technologies that I own</p>
-				<h2 className={styles.sectionHeadText}>Technology Skills</h2>
-			</motion.div>
+			<HeadLineComponent subText="Technologies that I own" headText="Technology Skills" />
 			<div className="mt-20">
 				<AliceCarousel
 					infinite

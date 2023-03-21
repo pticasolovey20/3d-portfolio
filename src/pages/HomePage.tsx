@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { motion } from "framer-motion";
-import { styles } from "../styles/styles";
 
+import { styles } from "../styles/styles";
 import { ComputerCanvas } from "../components/canvas/cumputer";
 
 export const HomePage: FC = (): JSX.Element => {

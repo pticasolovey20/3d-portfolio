@@ -6,6 +6,7 @@ import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
 import { EducationPage } from "./pages/EducationPage";
 import { TechnologiesPage } from "./pages/TechnologiesPage";
+import { ProjectsPage } from "./pages/ProjectsPage";
 
 export const App: FC = (): JSX.Element => {
 	return (
@@ -17,6 +18,7 @@ export const App: FC = (): JSX.Element => {
 			<AboutPage />
 			<EducationPage />
 			<TechnologiesPage />
+			<ProjectsPage />
 		</div>
 	);
 };

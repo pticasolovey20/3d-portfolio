@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
-import { IExperiences, IServises } from "./constants";
+
+import { IExperiences, IProjects, IServises } from "./constants";
 
 export interface IIconSelector {
 	icon: string;
@@ -10,7 +11,12 @@ export interface IComputer {
 	isMobile: boolean;
 }
 
-export interface IService {
+export interface IHeadLine {
+	subText: string;
+	headText: string;
+}
+
+export interface IServiceCard {
 	index: number;
 	service: IServises;
 }
@@ -20,6 +26,11 @@ export interface IWrapper {
 	id: string;
 }
 
-export interface IEducation {
+export interface IEducationCard {
 	experience: IExperiences;
+}
+
+export interface IProjectCard {
+	index: number;
+	project: IProjects;
 }

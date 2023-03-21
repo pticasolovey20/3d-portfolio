@@ -1,9 +1,11 @@
 import { FC } from "react";
-
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
-import { IEducation } from "../../types/props";
 
-export const EducationCard: FC<IEducation> = ({ experience }: IEducation): JSX.Element => {
+import { IEducationCard } from "../../types/props";
+
+export const EducationCardComponent: FC<IEducationCard> = ({
+	experience,
+}: IEducationCard): JSX.Element => {
 	return (
 		<VerticalTimelineElement
 			contentStyle={{ background: "#1d1836", color: "#fff" }}

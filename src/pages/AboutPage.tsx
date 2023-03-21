@@ -1,20 +1,16 @@
 import { FC } from "react";
 import { motion } from "framer-motion";
 
-import { styles } from "../styles/styles";
 import { services } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
-
-import { ServiceCard } from "../components/service-card";
+import { fadeIn } from "../utils/motion";
+import { ServiceCardComponent } from "../components/service-card";
 import { WrapperComponent } from "../components/wrapper";
+import { HeadLineComponent } from "../components/headline";
 
 export const AboutPage: FC = (): JSX.Element => {
 	return (
 		<WrapperComponent id="about">
-			<motion.div variants={textVariant()}>
-				<p className={styles.sectionSubText}>Introduction</p>
-				<h2 className={styles.sectionHeadText}>Overview</h2>
-			</motion.div>
+			<HeadLineComponent subText="Introduction" headText="Overview" />
 			<motion.p
 				variants={fadeIn("", "", 0.1, 1)}
 				className="mt-4 text-secondary text-[17px] max-w-screen-2xl leading-[30px]"
@@ -26,7 +22,7 @@ export const AboutPage: FC = (): JSX.Element => {
 			</motion.p>
 			<div className="mt-20 flex flex-wrap gap-[50px]">
 				{services.map((service, index) => (
-					<ServiceCard key={service.title} index={index} service={service} />
+					<ServiceCardComponent key={service.title} index={index} service={service} />
 				))}
 			</div>
 		</WrapperComponent>

@@ -1,8 +1,8 @@
 import { FC, Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import { IComputer } from "../../../types/props";
 
+import { IComputer } from "../../../types/props";
 import { LoaderComponent } from "../loader";
 
 export const ComputerComponent: FC<IComputer> = ({ isMobile }: IComputer): JSX.Element => {

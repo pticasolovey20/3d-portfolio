@@ -1,4 +1,5 @@
 import { FC } from "react";
+
 import { IIconSelector } from "../../types/props";
 import { styles } from "../../styles/styles";
 
@@ -7,7 +8,10 @@ import { AiOutlineHome } from "react-icons/ai";
 import { AiOutlineUser } from "react-icons/ai";
 import { TbSchool } from "react-icons/tb";
 import { RiStackLine } from "react-icons/ri";
+import { VscSymbolMethod } from "react-icons/vsc";
 import { BiMailSend } from "react-icons/bi";
+import { BsLaptop } from "react-icons/bs";
+import { AiFillGithub } from "react-icons/ai";
 
 export const IconSelectorComponent: FC<IIconSelector> = ({
 	icon,
@@ -29,8 +33,17 @@ export const IconSelectorComponent: FC<IIconSelector> = ({
 		case "stack":
 			return <RiStackLine className={active === icon ? styles.active : styles.icon} />;
 
+		case "projects":
+			return <VscSymbolMethod className={active === icon ? styles.active : styles.icon} />;
+
 		case "contact":
 			return <BiMailSend className={active === icon ? styles.active : styles.icon} />;
+
+		case "demo":
+			return <BsLaptop className={styles.project} />;
+
+		case "github":
+			return <AiFillGithub className={styles.project} />;
 
 		default:
 			return null;
