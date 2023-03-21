@@ -1,13 +1,10 @@
 import { FC } from "react";
 import $ from "jquery";
-import AliceCarousel from "react-alice-carousel";
-import "react-alice-carousel/lib/alice-carousel.css";
-import { motion } from "framer-motion";
 
-import { textVariant } from "../utils/motion";
-import { styles } from "../styles/styles";
 import { technologies } from "../constants";
 import { WrapperComponent } from "../components/wrapper";
+import { HeadLineComponent } from "../components/headline";
+import { SliderComponent } from "../components/slider";
 
 const body = $("body");
 
@@ -22,7 +19,7 @@ if (body) {
 					{
 						width: $(this).attr("data-percent"),
 					},
-					2000
+					1500
 				);
 			});
 		}
@@ -64,22 +61,14 @@ export const TechnologiesPage: FC = (): JSX.Element => {
 
 	return (
 		<WrapperComponent id="stack">
-			<motion.div variants={textVariant()}>
-				<p className={styles.sectionSubText}>Technologies that I own</p>
-				<h2 className={styles.sectionHeadText}>Technology Skills</h2>
-			</motion.div>
-			<div className="mt-20">
-				<AliceCarousel
-					infinite
-					autoPlay
-					disableButtonsControls
-					disableDotsControls
-					mouseTracking
-					autoPlayInterval={750}
-					items={items}
-					responsive={responsive}
-				/>
-			</div>
+			<HeadLineComponent subText="Technologies that I own" headText="Technology Skills" />
+			<SliderComponent
+				disableButtonsControls={true}
+				autoPlay={true}
+				autoPlayInterval={750}
+				items={items}
+				responsive={responsive}
+			/>
 		</WrapperComponent>
 	);
 };

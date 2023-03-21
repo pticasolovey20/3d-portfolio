@@ -6,6 +6,9 @@ import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
 import { EducationPage } from "./pages/EducationPage";
 import { TechnologiesPage } from "./pages/TechnologiesPage";
+import { ProjectsPage } from "./pages/ProjectsPage";
+import { ContactPage } from "./pages/ContactPage";
+import { StarsComponent } from "./components/canvas/stars";
 
 export const App: FC = (): JSX.Element => {
 	return (
@@ -17,6 +20,11 @@ export const App: FC = (): JSX.Element => {
 			<AboutPage />
 			<EducationPage />
 			<TechnologiesPage />
+			<ProjectsPage />
+			<div className="realtive z-0">
+				<ContactPage />
+				<StarsComponent />
+			</div>
 		</div>
 	);
 };

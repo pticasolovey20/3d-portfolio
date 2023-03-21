@@ -15,4 +15,10 @@ export const styles = {
 	chevron: "h-8 w-8 cursor-pointer hover:text-purple-500",
 	icon: "h-12 w-12 p-2 rounded-full text-white text-4xl transition duration-300 ease-in-out hover:bg-purple-500 hover:border-purple-500 border-2 border-transparent",
 	active: "h-12 w-12 p-2 rounded-full border-2 border-purple-500",
+
+	project: "h-[15px] w-[15px]",
+
+	contact: "h-6 w-6",
+
+	git: "h-8 w-8",
 };

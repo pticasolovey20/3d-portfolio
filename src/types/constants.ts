@@ -16,3 +16,16 @@ export interface ITechnologies {
 	name: string;
 	icon: any;
 }
+
+export interface IProjects {
+	name: string;
+	description: string;
+	tags: ITags[];
+	image: any;
+	source_code_link: string;
+}
+
+interface ITags {
+	name: string;
+	color: string;
+}

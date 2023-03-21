@@ -1,25 +1,26 @@
-import firstExample from "../assets/firstExample.png";
-import secondExample from "../assets/secondExample.png";
-import thirdExample from "../assets/thirdExample.png";
-import fourthExample from "../assets/fourthExample.png";
+import {
+	firstExample,
+	secondExample,
+	thirdExample,
+	fourthExample,
+	wayup,
+	upwork,
+	html,
+	css,
+	javascript,
+	typescript,
+	reactjs,
+	redux,
+	tailwind,
+	nodejs,
+	git,
+	figma,
+	project,
+} from "../assets";
 
-import wayup from "../assets/company/wayup.png";
-import upwork from "../assets/company/upwork.png";
+import { IExperiences, IProjects, IServises, ITechnologies } from "../types/constants";
 
-import html from "../assets/tech/html.png";
-import css from "../assets/tech/css.png";
-import javascript from "../assets/tech/javascript.png";
-import typescript from "../assets/tech/typescript.png";
-import reactjs from "../assets/tech/reactjs.png";
-import redux from "../assets/tech/redux.png";
-import tailwind from "../assets/tech/tailwind.png";
-import nodejs from "../assets/tech/nodejs.png";
-import git from "../assets/tech/git.png";
-import figma from "../assets/tech/figma.png";
-
-import { IExperiences, IServises, ITechnologies } from "../types/constants";
-
-export const navigations: string[] = ["home", "about", "education", "stack", "contact"];
+export const navigations: string[] = ["home", "about", "education", "stack", "projects", "contact"];
 
 export const services: IServises[] = [
 	{
@@ -112,5 +113,71 @@ export const technologies: ITechnologies[] = [
 	{
 		name: "figma",
 		icon: figma,
+	},
+];
+
+export const projects: IProjects[] = [
+	{
+		name: "Project 1",
+		description:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		tags: [
+			{
+				name: "react",
+				color: "blue-text-gradient",
+			},
+			{
+				name: "mongodb",
+				color: "green-text-gradient",
+			},
+			{
+				name: "tailwind",
+				color: "pink-text-gradient",
+			},
+		],
+		image: project,
+		source_code_link: "https://github.com/",
+	},
+	{
+		name: "Project 2",
+		description:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		tags: [
+			{
+				name: "react",
+				color: "blue-text-gradient",
+			},
+			{
+				name: "restapi",
+				color: "green-text-gradient",
+			},
+			{
+				name: "scss",
+				color: "pink-text-gradient",
+			},
+		],
+		image: project,
+		source_code_link: "https://github.com/",
+	},
+	{
+		name: "Project 3",
+		description:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		tags: [
+			{
+				name: "nextjs",
+				color: "blue-text-gradient",
+			},
+			{
+				name: "supabase",
+				color: "green-text-gradient",
+			},
+			{
+				name: "css",
+				color: "pink-text-gradient",
+			},
+		],
+		image: project,
+		source_code_link: "https://github.com/",
 	},
 ];
