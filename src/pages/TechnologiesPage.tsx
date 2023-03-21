@@ -1,11 +1,10 @@
 import { FC } from "react";
 import $ from "jquery";
-import AliceCarousel from "react-alice-carousel";
-import "react-alice-carousel/lib/alice-carousel.css";
 
 import { technologies } from "../constants";
 import { WrapperComponent } from "../components/wrapper";
 import { HeadLineComponent } from "../components/headline";
+import { SliderComponent } from "../components/slider";
 
 const body = $("body");
 
@@ -20,7 +19,7 @@ if (body) {
 					{
 						width: $(this).attr("data-percent"),
 					},
-					2000
+					1500
 				);
 			});
 		}
@@ -63,18 +62,13 @@ export const TechnologiesPage: FC = (): JSX.Element => {
 	return (
 		<WrapperComponent id="stack">
 			<HeadLineComponent subText="Technologies that I own" headText="Technology Skills" />
-			<div className="mt-20">
-				<AliceCarousel
-					infinite
-					autoPlay
-					disableButtonsControls
-					disableDotsControls
-					mouseTracking
-					autoPlayInterval={750}
-					items={items}
-					responsive={responsive}
-				/>
-			</div>
+			<SliderComponent
+				disableButtonsControls={true}
+				autoPlay={true}
+				autoPlayInterval={750}
+				items={items}
+				responsive={responsive}
+			/>
 		</WrapperComponent>
 	);
 };

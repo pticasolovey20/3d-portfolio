@@ -17,4 +17,8 @@ export const styles = {
 	active: "h-12 w-12 p-2 rounded-full border-2 border-purple-500",
 
 	project: "h-[15px] w-[15px]",
+
+	contact: "h-6 w-6",
+
+	git: "h-8 w-8",
 };

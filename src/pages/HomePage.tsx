@@ -1,10 +1,23 @@
-import { FC } from "react";
+import { FC, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles/styles";
-import { ComputerCanvas } from "../components/canvas/cumputer";
+import { ComputerComponent } from "../components/canvas/cumputer";
 
 export const HomePage: FC = (): JSX.Element => {
+	const [isModile, setIsMobile] = useState(false);
+
+	useEffect(() => {
+		const mediaQuery = window.matchMedia("(max-width: 500px)");
+
+		setIsMobile(mediaQuery.matches);
+
+		const handleMediaQueryChange = (event: any) => setIsMobile(event.mathces);
+		mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+		return () => mediaQuery.removeEventListener("change", handleMediaQueryChange);
+	}, []);
+
 	return (
 		<section className={`relative w-full h-screen mx-auto`} id="home">
 			<div
@@ -25,7 +38,7 @@ export const HomePage: FC = (): JSX.Element => {
 					</p>
 				</div>
 			</div>
-			<ComputerCanvas />
+			<ComputerComponent isMobile={isModile} />
 			<div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
 				<a href="#about">
 					<div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-[5px]">

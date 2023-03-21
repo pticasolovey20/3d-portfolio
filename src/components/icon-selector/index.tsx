@@ -12,6 +12,8 @@ import { VscSymbolMethod } from "react-icons/vsc";
 import { BiMailSend } from "react-icons/bi";
 import { BsLaptop } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
+import { BsPhone } from "react-icons/bs";
+import { SlSocialLinkedin } from "react-icons/sl";
 
 export const IconSelectorComponent: FC<IIconSelector> = ({
 	icon,
@@ -44,6 +46,15 @@ export const IconSelectorComponent: FC<IIconSelector> = ({
 
 		case "github":
 			return <AiFillGithub className={styles.project} />;
+
+		case "phone":
+			return <BsPhone className={styles.contact} />;
+
+		case "linkedin":
+			return <SlSocialLinkedin className={styles.contact} />;
+
+		case "git":
+			return <AiFillGithub className={styles.git} />;
 
 		default:
 			return null;

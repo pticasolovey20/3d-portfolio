@@ -6,8 +6,25 @@ import { fadeIn } from "../utils/motion";
 import { WrapperComponent } from "../components/wrapper";
 import { HeadLineComponent } from "../components/headline";
 import { ProjectCardComponent } from "../components/project-card";
+import { SliderComponent } from "../components/slider";
 
 export const ProjectsPage: FC = (): JSX.Element => {
+	const responsive = {
+		540: {
+			items: 1,
+		},
+		820: {
+			items: 2,
+		},
+		1200: {
+			items: 3,
+		},
+	};
+
+	const items = projects.map((project, index) => {
+		return <ProjectCardComponent key={`project-${index}`} project={project} />;
+	});
+
 	return (
 		<WrapperComponent id="projects">
 			<HeadLineComponent subText="Little more than a hobby" headText="Projects" />
@@ -22,15 +39,7 @@ export const ProjectsPage: FC = (): JSX.Element => {
 					problems, work with different technologies, and manage projects effectively.
 				</motion.p>
 			</div>
-			<div className="mt-20 flex flex-wrap gap-[50px]">
-				{projects.map((project, index) => (
-					<ProjectCardComponent
-						key={`project-${index}`}
-						project={project}
-						index={index}
-					/>
-				))}
-			</div>
+			<SliderComponent disableButtonsControls={false} items={items} responsive={responsive} />
 		</WrapperComponent>
 	);
 };

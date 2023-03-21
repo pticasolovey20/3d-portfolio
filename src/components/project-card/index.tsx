@@ -1,17 +1,12 @@
 import { FC } from "react";
-import { motion } from "framer-motion";
 
 import { IProjectCard } from "../../types/props";
-import { fadeIn } from "../../utils/motion";
 import { IconSelectorComponent } from "../icon-selector";
 
-export const ProjectCardComponent: FC<IProjectCard> = ({
-	project,
-	index,
-}: IProjectCard): JSX.Element => {
+export const ProjectCardComponent: FC<IProjectCard> = ({ project }: IProjectCard): JSX.Element => {
 	return (
-		<motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className="flex-auto">
-			<div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
+		<div className="green-pink-gradient p-[1px] rounded-2xl mr-10 cursor-grab select-none">
+			<div className="bg-tertiary p-5 rounded-2xl">
 				<div className="relative w-full h-[230px]">
 					<img
 						src={project.image}
@@ -28,8 +23,10 @@ export const ProjectCardComponent: FC<IProjectCard> = ({
 				</div>
 				<div className="mt-5">
 					<h3 className="text-white font-bold text-[24px]">{project.name}</h3>
-					<p className="mt-2 text-secondary text-[14px]">{project.description}</p>
-					<div className="mt-2 flex justify-between text-[13px]">
+					<p className="mt-2 text-secondary text-[14px] border-b-[1px] border-secondary pb-2">
+						{project.description}
+					</p>
+					<div className="mt-1 flex justify-between text-[13px]">
 						<a
 							href="/#"
 							target="_blank"
@@ -49,6 +46,6 @@ export const ProjectCardComponent: FC<IProjectCard> = ({
 					</div>
 				</div>
 			</div>
-		</motion.div>
+		</div>
 	);
 };
