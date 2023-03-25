@@ -3,7 +3,6 @@ import { FC } from "react";
 import { IIconSelector } from "../../types/props";
 import { styles } from "../../styles/styles";
 
-import { AiOutlineRight } from "react-icons/ai";
 import { AiOutlineHome } from "react-icons/ai";
 import { AiOutlineUser } from "react-icons/ai";
 import { TbSchool } from "react-icons/tb";
@@ -15,15 +14,14 @@ import { AiFillGithub } from "react-icons/ai";
 import { BsPhone } from "react-icons/bs";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { FaTelegramPlane } from "react-icons/fa";
+import { BsFillCaretRightFill } from "react-icons/bs";
+import { BsFillCaretLeftFill } from "react-icons/bs";
 
 export const IconSelectorComponent: FC<IIconSelector> = ({
 	icon,
 	active,
 }: IIconSelector): JSX.Element | null => {
 	switch (icon) {
-		case "chevron":
-			return <AiOutlineRight className={styles.chevron} />;
-
 		case "home":
 			return <AiOutlineHome className={active === icon ? styles.active : styles.icon} />;
 
@@ -58,7 +56,13 @@ export const IconSelectorComponent: FC<IIconSelector> = ({
 			return <AiFillGithub className={styles.git} />;
 
 		case "telegram":
-			return <FaTelegramPlane className={styles.git} />;
+			return <FaTelegramPlane className={styles.contact} />;
+
+		case "right":
+			return <BsFillCaretRightFill className={styles.chevron} />;
+
+		case "left":
+			return <BsFillCaretLeftFill className={styles.chevron} />;
 
 		default:
 			return null;

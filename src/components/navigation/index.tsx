@@ -20,7 +20,7 @@ export const NavigationComponent: FC = (): JSX.Element => {
 			) : (
 				<div className="fixed top-1/4 left-[10px]">
 					<div className="text-white" onClick={() => setOpen(true)}>
-						<IconSelectorComponent icon="chevron" />
+						<IconSelectorComponent icon="right" />
 					</div>
 				</div>
 			)}
