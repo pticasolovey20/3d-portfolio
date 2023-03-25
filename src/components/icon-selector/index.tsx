@@ -14,6 +14,7 @@ import { BsLaptop } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
 import { BsPhone } from "react-icons/bs";
 import { SlSocialLinkedin } from "react-icons/sl";
+import { FaTelegramPlane } from "react-icons/fa";
 
 export const IconSelectorComponent: FC<IIconSelector> = ({
 	icon,
@@ -55,6 +56,9 @@ export const IconSelectorComponent: FC<IIconSelector> = ({
 
 		case "git":
 			return <AiFillGithub className={styles.git} />;
+
+		case "telegram":
+			return <FaTelegramPlane className={styles.git} />;
 
 		default:
 			return null;

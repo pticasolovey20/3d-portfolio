@@ -8,6 +8,7 @@ import { slideIn } from "../utils/motion";
 import { HeadLineComponent } from "../components/headline";
 import { InputComponent } from "../components/input";
 import { IconSelectorComponent } from "../components/icon-selector";
+import { contacts } from "../constants";
 
 export const ContactPage: FC = (): JSX.Element => {
 	const formRef = useRef(null);
@@ -107,25 +108,24 @@ export const ContactPage: FC = (): JSX.Element => {
 								{loading ? "Sending..." : "Send"}
 							</button>
 							<div className="flex gap-5 items-center">
-								<div className="flex flex-col items-end">
-									<p className="text-[14px] text-secondary">Telegram</p>
-									<p className="text-[16px] text-secondary">+38-066-009-82-97</p>
-								</div>
-								<div className="w-12 h-12 flex items-center rounded-full green-pink-gradient p-[2px] cursor-pointer">
-									<div className="text-secondary bg-[#151030] rounded-full w-full h-full flex items-center justify-center gap-2">
-										<IconSelectorComponent icon="phone" />
-									</div>
-								</div>
+								<p className="text-[16px] text-secondary">+38-066-009-82-97</p>
 
-								<div className="w-12 h-12 flex items-center rounded-full green-pink-gradient p-[2px] cursor-pointer">
-									<div className="text-secondary bg-[#151030] rounded-full w-full h-full flex items-center justify-center">
-										<IconSelectorComponent icon="linkedin" />
-									</div>
-								</div>
-								<div className="w-12 h-12 flex items-center rounded-full green-pink-gradient p-[2px] cursor-pointer">
-									<div className="text-secondary bg-[#151030] rounded-full w-full h-full flex items-center justify-center">
-										<IconSelectorComponent icon="git" />
-									</div>
+								<div className="flex gap-3">
+									{contacts.map((element, index) => (
+										<div
+											key={index}
+											className="w-12 h-12 flex items-center rounded-full green-pink-gradient p-[2px] cursor-pointer"
+										>
+											<a
+												href={element.link}
+												rel="noreferrer"
+												target="_blank"
+												className="text-secondary bg-[#151030] rounded-full w-full h-full flex items-center justify-center"
+											>
+												<IconSelectorComponent icon={element.name} />
+											</a>
+										</div>
+									))}
 								</div>
 							</div>
 						</div>
