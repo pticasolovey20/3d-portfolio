@@ -18,7 +18,7 @@ import {
 	project,
 } from "../assets";
 
-import { IExperiences, IProjects, IServises, ITechnologies } from "../types/constants";
+import { IContacts, IExperiences, IProjects, IServises, ITechnologies } from "../types/constants";
 
 export const navigations: string[] = ["home", "about", "education", "stack", "projects", "contact"];
 
@@ -179,5 +179,20 @@ export const projects: IProjects[] = [
 		],
 		image: project,
 		source_code_link: "https://github.com/",
+	},
+];
+
+export const contacts: IContacts[] = [
+	{
+		name: "telegram",
+		link: "https://t.me/pticasolovey20",
+	},
+	{
+		name: "linkedin",
+		link: "https://www.linkedin.com/in/pticasolovey/",
+	},
+	{
+		name: "git",
+		link: "https://github.com/pticasolovey20",
 	},
 ];

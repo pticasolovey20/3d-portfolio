@@ -29,3 +29,8 @@ interface ITags {
 	name: string;
 	color: string;
 }
+
+export interface IContacts {
+	name: string;
+	link: string;
+}
