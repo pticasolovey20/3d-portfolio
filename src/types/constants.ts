@@ -1,6 +1,6 @@
 export interface IServises {
 	title: string;
-	icon: any;
+	text: string[];
 }
 
 export interface IExperiences {
