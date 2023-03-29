@@ -22,7 +22,9 @@ export const ProjectCardComponent: FC<IProjectCard> = ({ project }: IProjectCard
 					))}
 				</div>
 				<div className="mt-5">
-					<h3 className="text-white font-bold text-[24px]">{project.name}</h3>
+					<h3 className="text-white font-bold text-[24px] tracking-widest uppercase flex justify-center">
+						{project.name}
+					</h3>
 					<p className="mt-2 text-secondary text-[14px] border-b-[1px] border-secondary pb-2">
 						{project.description}
 					</p>
