@@ -69,7 +69,7 @@ export const ContactPage: FC = (): JSX.Element => {
 					variants={slideIn("left", "tween", 0.2, 1)}
 					className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
 				>
-					<HeadLineComponent subText="Get in Touch" headText="Contact" />
+					<HeadLineComponent headText="Contact" />
 					<form
 						ref={formRef}
 						onSubmit={handleSubmit}

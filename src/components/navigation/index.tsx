@@ -8,7 +8,7 @@ export const NavigationComponent: FC = (): JSX.Element => {
 	const [open, setOpen] = useState<boolean>(false);
 
 	return (
-		<div className="fixed top-1/2 left-[-10px] transform -translate-y-1/2 -translate-x-100px p-5">
+		<div className="fixed top-1/2 left-[-10px] transform -translate-y-1/2 -translate-x-100px p-5 z-10">
 			{open ? (
 				<nav className="flex flex-col justify-center items-center gap-5 p-3 bg-[#915EFF]/10 rounded-[50px]">
 					{navigations.map((link, index) => (
@@ -20,7 +20,7 @@ export const NavigationComponent: FC = (): JSX.Element => {
 			) : (
 				<div className="fixed top-1/4 left-[10px]">
 					<div className="text-white" onClick={() => setOpen(true)}>
-						<IconSelectorComponent icon="chevron" />
+						<IconSelectorComponent icon="right" />
 					</div>
 				</div>
 			)}

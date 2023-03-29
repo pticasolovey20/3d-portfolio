@@ -3,6 +3,7 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
 import { ISlider } from "../../types/props";
+import { IconSelectorComponent } from "../icon-selector";
 
 export const SliderComponent: FC<ISlider> = ({
 	disableButtonsControls,
@@ -22,6 +23,16 @@ export const SliderComponent: FC<ISlider> = ({
 				autoPlayInterval={autoPlayInterval}
 				items={items}
 				responsive={responsive}
+				renderPrevButton={() => (
+					<button className="absolute left-[435px] top-1/2">
+						<IconSelectorComponent icon="left" />
+					</button>
+				)}
+				renderNextButton={() => (
+					<button className="absolute right-[475px] top-1/2">
+						<IconSelectorComponent icon="right" />
+					</button>
+				)}
 			/>
 		</div>
 	);
