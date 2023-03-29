@@ -16,6 +16,7 @@ import { SlSocialLinkedin } from "react-icons/sl";
 import { FaTelegramPlane } from "react-icons/fa";
 import { BsFillCaretRightFill } from "react-icons/bs";
 import { BsFillCaretLeftFill } from "react-icons/bs";
+import { IoLocationSharp } from "react-icons/io5";
 
 export const IconSelectorComponent: FC<IIconSelector> = ({
 	icon,
@@ -54,6 +55,9 @@ export const IconSelectorComponent: FC<IIconSelector> = ({
 
 		case "git":
 			return <AiFillGithub className={styles.git} />;
+
+		case "location":
+			return <IoLocationSharp className={styles.project} />;
 
 		case "telegram":
 			return <FaTelegramPlane className={styles.contact} />;

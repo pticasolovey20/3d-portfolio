@@ -1,8 +1,4 @@
 import {
-	firstExample,
-	secondExample,
-	thirdExample,
-	fourthExample,
 	wayup,
 	upwork,
 	html,
@@ -24,20 +20,26 @@ export const navigations: string[] = ["home", "about", "education", "stack", "pr
 
 export const services: IServises[] = [
 	{
-		title: "Example 1",
-		icon: firstExample,
+		title: "HTML and CSS",
+		text: [
+			"I possess excellent knowledge of HTML and CSS, which enables me to create beautiful and functional website interfaces.",
+			"Additionally, I am proficient in working with various frameworks, including MUI and Tailwind.",
+			"I am also skilled in creating responsive web designs optimized for viewing on multiple devices, ensuring the creation of mobile-friendly websites that look and function well on all screens.",
+		],
 	},
 	{
-		title: "Example 2",
-		icon: secondExample,
+		title: "JavaScript Developer",
+		text: [
+			"I have strong knowledge of JavaScript and TypeScript, which allows me to create dynamic and interactive websites",
+			"With my expertise, I am able to develop complex web applications, create user-friendly interfaces, and enhance user experience.",
+		],
 	},
 	{
-		title: "Example 3",
-		icon: thirdExample,
-	},
-	{
-		title: "Example 4",
-		icon: fourthExample,
+		title: "React Developer",
+		text: [
+			"I am skilled in using React to create fast, scalable, and maintainable web applications with dynamic user interfaces.",
+			"I have experience implementing advanced features like state management, routing, and server-side rendering, and I am proficient in using popular React-based frameworks and libraries like Redux and Next.js.",
+		],
 	},
 ];
 

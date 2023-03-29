@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles/styles";
 import { ComputerComponent } from "../components/canvas/cumputer";
+import { IconSelectorComponent } from "../components/icon-selector";
 
 export const HomePage: FC = (): JSX.Element => {
 	const [isModile, setIsMobile] = useState(false);
@@ -32,7 +33,11 @@ export const HomePage: FC = (): JSX.Element => {
 					<h1 className={`${styles.heroHeadText} text-white`}>
 						Hi, I'm <span className="text-[#915EFF]">Dmytro</span>
 					</h1>
-					<p className={`${styles.heroText} mt-2 text-white-100`}>FRONT-END DEVELOPER</p>
+					<p className="flex gap-2 text-[15px] items-center">
+						<IconSelectorComponent icon="location" />
+						Ukraine. Poltava
+					</p>
+					<p className={`${styles.heroText} mt-2`}>FRONT-END DEVELOPER</p>
 					<p className={`${styles.heroSubText} mt-2 text-white-100`}>
 						I develop user <br className="sm:block hidden" />
 						interfaces and web applications
