@@ -9,14 +9,16 @@ import { TbSchool } from "react-icons/tb";
 import { RiStackLine } from "react-icons/ri";
 import { VscSymbolMethod } from "react-icons/vsc";
 import { BiMailSend } from "react-icons/bi";
+
+import { IoLocationSharp } from "react-icons/io5";
 import { BsLaptop } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
-import { BsPhone } from "react-icons/bs";
-import { SlSocialLinkedin } from "react-icons/sl";
+
 import { FaTelegramPlane } from "react-icons/fa";
+import { SlSocialLinkedin } from "react-icons/sl";
+
 import { BsFillCaretRightFill } from "react-icons/bs";
 import { BsFillCaretLeftFill } from "react-icons/bs";
-import { IoLocationSharp } from "react-icons/io5";
 
 export const IconSelectorComponent: FC<IIconSelector> = ({
 	icon,
@@ -24,43 +26,46 @@ export const IconSelectorComponent: FC<IIconSelector> = ({
 }: IIconSelector): JSX.Element | null => {
 	switch (icon) {
 		case "home":
-			return <AiOutlineHome className={active === icon ? styles.active : styles.icon} />;
+			return <AiOutlineHome className={active === icon ? styles.active : styles.navIcon} />;
 
 		case "about":
-			return <AiOutlineUser className={active === icon ? styles.active : styles.icon} />;
+			return <AiOutlineUser className={active === icon ? styles.active : styles.navIcon} />;
 
 		case "education":
-			return <TbSchool className={active === icon ? styles.active : styles.icon} />;
+			return <TbSchool className={active === icon ? styles.active : styles.navIcon} />;
 
 		case "stack":
-			return <RiStackLine className={active === icon ? styles.active : styles.icon} />;
+			return <RiStackLine className={active === icon ? styles.active : styles.navIcon} />;
 
 		case "projects":
-			return <VscSymbolMethod className={active === icon ? styles.active : styles.icon} />;
+			return <VscSymbolMethod className={active === icon ? styles.active : styles.navIcon} />;
 
 		case "contact":
-			return <BiMailSend className={active === icon ? styles.active : styles.icon} />;
+			return <BiMailSend className={active === icon ? styles.active : styles.navIcon} />;
+
+		// small icons
+
+		case "location":
+			return <IoLocationSharp className={styles.small} />;
 
 		case "demo":
-			return <BsLaptop className={styles.project} />;
+			return <BsLaptop className={styles.small} />;
 
 		case "github":
-			return <AiFillGithub className={styles.project} />;
+			return <AiFillGithub className={styles.small} />;
 
-		case "phone":
-			return <BsPhone className={styles.contact} />;
+		// contact icons
+
+		case "telegram":
+			return <FaTelegramPlane className={styles.contact} />;
 
 		case "linkedin":
 			return <SlSocialLinkedin className={styles.contact} />;
 
 		case "git":
-			return <AiFillGithub className={styles.git} />;
+			return <AiFillGithub className={styles.contact} />;
 
-		case "location":
-			return <IoLocationSharp className={styles.project} />;
-
-		case "telegram":
-			return <FaTelegramPlane className={styles.contact} />;
+		// control button icons
 
 		case "right":
 			return <BsFillCaretRightFill className={styles.chevron} />;
