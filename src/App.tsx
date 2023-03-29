@@ -9,6 +9,7 @@ import { TechnologiesPage } from "./pages/TechnologiesPage";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import { ContactPage } from "./pages/ContactPage";
 import { StarsComponent } from "./components/canvas/stars";
+import { MarqueeComponent } from "./components/marquee";
 
 export const App: FC = (): JSX.Element => {
 	return (
@@ -18,10 +19,12 @@ export const App: FC = (): JSX.Element => {
 				<NavigationComponent />
 			</div>
 			<AboutPage />
+			<MarqueeComponent />
 			<EducationPage />
 			<TechnologiesPage />
 			<ProjectsPage />
 			<div className="realtive z-0">
+				<MarqueeComponent />
 				<ContactPage />
 				<StarsComponent />
 			</div>

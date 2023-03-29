@@ -14,7 +14,7 @@ export interface IComputer {
 }
 
 export interface IHeadLine {
-	subText: string;
+	subText?: string;
 	headText: string;
 }
 
@@ -65,4 +65,8 @@ export interface ISlider {
 	autoPlay?: boolean;
 	items: JSX.Element[];
 	responsive: Responsive;
+}
+
+export interface IMarquee {
+	text: string;
 }
