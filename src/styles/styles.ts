@@ -31,4 +31,5 @@ export const styles = {
 	contact: "h-6 w-6",
 
 	chevron: "h-8 w-8 cursor-pointer hover:text-purple-500",
+	up: "h-8 w-8",
 };

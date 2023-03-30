@@ -10,6 +10,8 @@ import { InputComponent } from "../components/input";
 import { IconSelectorComponent } from "../components/icon-selector";
 import { contacts } from "../constants";
 
+import { notifySuccess, notifyError } from "../utils/notify";
+
 export const ContactPage: FC = (): JSX.Element => {
 	const formRef = useRef(null);
 	const [form, setForm] = useState({
@@ -46,8 +48,7 @@ export const ContactPage: FC = (): JSX.Element => {
 			.then(
 				() => {
 					setLoading(false);
-					alert("Thank you! I will get back to you as soon as possible");
-
+					notifySuccess();
 					setForm({
 						name: "",
 						email: "",
@@ -57,7 +58,7 @@ export const ContactPage: FC = (): JSX.Element => {
 				(error) => {
 					setLoading(false);
 					console.log(error);
-					alert("Something went wrong");
+					notifyError();
 				}
 			);
 	};
