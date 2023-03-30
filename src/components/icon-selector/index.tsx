@@ -73,6 +73,9 @@ export const IconSelectorComponent: FC<IIconSelector> = ({
 		case "left":
 			return <BsFillCaretLeftFill className={styles.chevron} />;
 
+		case "up":
+			return <BsFillCaretRightFill className={styles.up} />;
+
 		default:
 			return null;
 	}

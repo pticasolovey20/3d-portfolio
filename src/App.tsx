@@ -10,6 +10,10 @@ import { ProjectsPage } from "./pages/ProjectsPage";
 import { ContactPage } from "./pages/ContactPage";
 import { StarsComponent } from "./components/canvas/stars";
 import { MarqueeComponent } from "./components/marquee";
+import { ToastContainer } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
+import { ScrollTopComponent } from "./components/scroll-top";
 
 export const App: FC = (): JSX.Element => {
 	return (
@@ -28,6 +32,19 @@ export const App: FC = (): JSX.Element => {
 				<ContactPage />
 				<StarsComponent />
 			</div>
+			<ToastContainer
+				position="bottom-left"
+				autoClose={5000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+				theme="dark"
+			/>
+			<ScrollTopComponent />
 		</div>
 	);
 };
