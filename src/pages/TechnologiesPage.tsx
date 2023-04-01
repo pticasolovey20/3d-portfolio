@@ -1,10 +1,11 @@
 import { FC } from "react";
 import $ from "jquery";
 
-import { technologies } from "../constants";
 import { WrapperComponent } from "../components/wrapper";
 import { HeadLineComponent } from "../components/headline";
 import { SliderComponent } from "../components/slider";
+
+import { technologies } from "../constants";
 
 const body = $("body");
 

@@ -13,6 +13,7 @@ import git from "./tech/git.png";
 import figma from "./tech/figma.png";
 
 import project from "../assets/project.png";
+import code from "./code.png";
 
 export {
 	wayup,
@@ -28,4 +29,5 @@ export {
 	tailwind,
 	typescript,
 	project,
+	code,
 };

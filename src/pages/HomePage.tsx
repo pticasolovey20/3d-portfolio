@@ -1,9 +1,10 @@
 import { FC, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-import { styles } from "../styles/styles";
 import { ComputerComponent } from "../components/canvas/cumputer";
 import { IconSelectorComponent } from "../components/icon-selector";
+
+import { styles } from "../styles/styles";
 
 export const HomePage: FC = (): JSX.Element => {
 	const [isModile, setIsMobile] = useState(false);
@@ -33,7 +34,7 @@ export const HomePage: FC = (): JSX.Element => {
 					<h1 className={`${styles.heroHeadText} text-white`}>
 						Hi, I'm <span className="text-[#915EFF]">Dmytro</span>
 					</h1>
-					<p className="flex gap-2 text-[15px] items-center">
+					<p className="flex items-center gap-2 text-[15px]">
 						<IconSelectorComponent icon="location" />
 						Ukraine. Poltava
 					</p>
@@ -47,7 +48,7 @@ export const HomePage: FC = (): JSX.Element => {
 			<ComputerComponent isMobile={isModile} />
 			<div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
 				<a href="#about">
-					<div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-[5px]">
+					<div className="w-[35px] h-[64px] flex justify-center items-start p-[5px] rounded-3xl border-4 border-secondary">
 						<motion.div
 							animate={{ y: [0, 24, 0] }}
 							transition={{

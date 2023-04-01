@@ -20,6 +20,8 @@ import { SlSocialLinkedin } from "react-icons/sl";
 import { BsFillCaretRightFill } from "react-icons/bs";
 import { BsFillCaretLeftFill } from "react-icons/bs";
 
+import { AiOutlineFilePdf } from "react-icons/ai";
+
 export const IconSelectorComponent: FC<IIconSelector> = ({
 	icon,
 	active,
@@ -75,6 +77,11 @@ export const IconSelectorComponent: FC<IIconSelector> = ({
 
 		case "up":
 			return <BsFillCaretRightFill className={styles.up} />;
+
+		// others
+
+		case "cv":
+			return <AiOutlineFilePdf className={styles.up} />;
 
 		default:
 			return null;

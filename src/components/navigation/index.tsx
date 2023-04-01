@@ -1,6 +1,7 @@
 import { FC, useState, useRef, useEffect } from "react";
 
 import { navigations } from "../../constants";
+
 import { IconSelectorComponent } from "../icon-selector";
 
 export const NavigationComponent: FC = (): JSX.Element => {

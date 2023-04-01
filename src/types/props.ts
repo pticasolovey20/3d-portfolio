@@ -51,7 +51,6 @@ interface ICamera {
 
 export interface IInput {
 	field: string;
-	span?: string;
 	type?: string;
 	name: string;
 	value: string;

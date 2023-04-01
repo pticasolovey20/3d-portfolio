@@ -1,7 +1,9 @@
 import React, { FC } from "react";
 import Marquee from "react-fast-marquee";
-import { styles } from "../../styles/styles";
+
 import { IMarquee } from "../../types/props";
+
+import { styles } from "../../styles/styles";
 
 const MarqueeItem: FC<IMarquee> = ({ text }: IMarquee): JSX.Element => {
 	return <div className={`${styles.marqueeText} select-none`}>{text}</div>;
