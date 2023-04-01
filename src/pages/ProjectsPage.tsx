@@ -1,12 +1,13 @@
 import { FC } from "react";
 import { motion } from "framer-motion";
 
-import { projects } from "../constants";
-import { fadeIn } from "../utils/motion";
 import { WrapperComponent } from "../components/wrapper";
 import { HeadLineComponent } from "../components/headline";
 import { ProjectCardComponent } from "../components/project-card";
 import { SliderComponent } from "../components/slider";
+
+import { projects } from "../constants";
+import { fadeIn } from "../utils/motion";
 
 export const ProjectsPage: FC = (): JSX.Element => {
 	const responsive = {
@@ -28,10 +29,10 @@ export const ProjectsPage: FC = (): JSX.Element => {
 	return (
 		<WrapperComponent id="projects">
 			<HeadLineComponent subText="Little more than a hobby" headText="Projects" />
-			<div className="w-full flex">
+			<div className="flex w-full">
 				<motion.p
 					variants={fadeIn("", "", 0.1, 1)}
-					className="mt-3 text-secondary text-[17px] max-w-screen-2xl leading-[30px]  "
+					className="max-w-screen-2xl text-secondary text-[17px] leading-[30px] mt-3"
 				>
 					Following projects showcases my skills and experience through real-world
 					examples of my work. Each project is briefly described with links to code

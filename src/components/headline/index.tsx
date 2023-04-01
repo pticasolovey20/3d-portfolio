@@ -1,9 +1,10 @@
 import { FC } from "react";
 import { motion } from "framer-motion";
 
-import { styles } from "../../styles/styles";
 import { textVariant } from "../../utils/motion";
 import { IHeadLine } from "../../types/props";
+
+import { styles } from "../../styles/styles";
 
 export const HeadLineComponent: FC<IHeadLine> = ({ subText, headText }: IHeadLine): JSX.Element => {
 	return (

@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 
-export const notifySuccess = () => {
-	toast.success("Success. I will get back to you", {
+export const notifySuccess = (text: string) => {
+	toast.success(text, {
 		position: "top-right",
 		autoClose: 5000,
 		hideProgressBar: false,
@@ -13,8 +13,8 @@ export const notifySuccess = () => {
 	});
 };
 
-export const notifyError = () => {
-	toast.success("Something went wrong", {
+export const notifyError = (text: string) => {
+	toast.error(text, {
 		position: "top-right",
 		autoClose: 5000,
 		hideProgressBar: false,

@@ -1,6 +1,6 @@
 import { FC } from "react";
-
-import { NavigationComponent } from "./components/navigation";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
@@ -9,10 +9,9 @@ import { TechnologiesPage } from "./pages/TechnologiesPage";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import { ContactPage } from "./pages/ContactPage";
 import { StarsComponent } from "./components/canvas/stars";
-import { MarqueeComponent } from "./components/marquee";
-import { ToastContainer } from "react-toastify";
 
-import "react-toastify/dist/ReactToastify.css";
+import { NavigationComponent } from "./components/navigation";
+import { MarqueeComponent } from "./components/marquee";
 import { ScrollTopComponent } from "./components/scroll-top";
 
 export const App: FC = (): JSX.Element => {

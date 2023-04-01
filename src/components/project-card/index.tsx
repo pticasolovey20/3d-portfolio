@@ -22,13 +22,13 @@ export const ProjectCardComponent: FC<IProjectCard> = ({ project }: IProjectCard
 					))}
 				</div>
 				<div className="mt-5">
-					<h3 className="text-white font-bold text-[24px] tracking-widest uppercase flex justify-center">
+					<h3 className="text-white font-bold text-[24px] tracking-widest uppercase">
 						{project.name}
 					</h3>
 					<p className="mt-2 text-secondary text-[14px] border-b-[1px] border-secondary pb-2">
 						{project.description}
 					</p>
-					<div className="mt-1 flex justify-between text-[13px]">
+					<div className="mt-2 flex justify-between text-[13px]">
 						<a
 							href="/#"
 							target="_blank"

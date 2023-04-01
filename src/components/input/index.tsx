@@ -1,9 +1,9 @@
 import { FC } from "react";
+
 import { IInput } from "../../types/props";
 
 export const InputComponent: FC<IInput> = ({
 	field,
-	span,
 	type,
 	name,
 	value,
@@ -13,32 +13,26 @@ export const InputComponent: FC<IInput> = ({
 	switch (field) {
 		case "input":
 			return (
-				<label className="flex flex-col">
-					<span className="text-white font-medium mb-4">{span}</span>
-					<input
-						type={type}
-						name={name}
-						value={value}
-						onChange={onChange}
-						placeholder={placeholder}
-						className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-					/>
-				</label>
+				<input
+					type={type}
+					name={name}
+					value={value}
+					onChange={onChange}
+					placeholder={placeholder}
+					className="w-full outline-none border-[#bac5d2]/20 border-2 rounded-xl bg-transparent font-medium py-4 px-6 text-white"
+				/>
 			);
 
 		case "textarea":
 			return (
-				<label className="flex flex-col">
-					<span className="text-white font-medium mb-4">Your Offer</span>
-					<textarea
-						rows={7}
-						name={name}
-						value={value}
-						onChange={onChange}
-						placeholder={placeholder}
-						className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-					/>
-				</label>
+				<textarea
+					rows={7}
+					name={name}
+					value={value}
+					onChange={onChange}
+					placeholder={placeholder}
+					className="bg-transparent py-4 px-6 placeholder:text-secondary text-white rounded-xl outline-none border-[#bac5d2]/20 border-2 font-medium"
+				/>
 			);
 
 		default:

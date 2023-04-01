@@ -25,7 +25,7 @@ export const ScrollTopComponent: FC = (): JSX.Element => {
 
 	return (
 		<div
-			className={`flex flex-col items-center fixed bottom-4 right-4 transition-all duration-300 ${
+			className={`fixed flex flex-col items-center bottom-4 right-4 transition-all duration-300 ${
 				isVisible ? "opacity-100" : "opacity-0"
 			} cursor-pointer hover:text-purple-500`}
 			onClick={handleClick}
